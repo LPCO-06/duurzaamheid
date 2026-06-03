@@ -8,7 +8,7 @@
     <title>Duurzaamheid - Main</title>
 </head>
 <body class="bg-[#E2E0DF] text-gray-800 font-[Poppins]">
-    <header class="py-6 bg-[#A62639]">
+    <header class="py-6 bg-[#A62639] shadow-lg">
         <nav class="flex justify-center py-4">
             <ul class="flex space-x-10 text-[#E2E0DF]">
                 <li><a class="
@@ -32,52 +32,73 @@
         </nav>
     </header>
 
-    <main class="container mb-10 border-b-2 border-black">
-        <div id="main" class="section">
-            <h1>DönerZaam&trade;</h1><p>De Eerlijke Draai</p>
-            <img src="img/doner.png" alt="DönerZaam Logo" height="100px" class="main-logo">
+    <main class="text-[#A62639]">
+        <div id="main" class="flex flex-col items-center justify-center text-center pt-20">
+            <h1 class="text-6xl font-extrabold">DönerZaam&trade;</h1>
+            <p class="text-xl mb-4">De Eerlijke Draai</p>
+            <img src="img/doner.png" alt="DönerZaam Logo" class="h-64 w-auto">        
         </div>
-        <div id="arbeiders" class="section">
-            <h1>Werking binnen Ons Bedrijf</h1>
-            <p>Bij Dürerzaam geloven we dat een gelukkige werknemer de beste broodjes vouwt. Geen uitbuiting of nachtwerk onder erbarmelijke omstandigheden, maar echte focus op kwaliteit en duurzaamheid.</p>
-            <ul>
-                <li><b>Eerlijk Loon:</b> Iedereen verdient minstens 110% van het minimumloon, inclusief volledige avond- en weekendtoeslagen.</li>
-                <li><b>Balans & Werktijden:</b> Geen gapende shifts tot 05:00 uur 's nachts. Onze zaken sluiten om 23:00 uur om de nachtrust en het sociale leven van het personeel te beschermen.</li>
-                <li><b>De Dürerzaam Academy:</b> We investeren in de ontwikkeling van onze medewerkers door middel van opleidingen en trainingen.</li>
-                <li><b>Veligheid Eerst:</b> De veiligheid van onze medewerkers is onze prioriteit. Onze werkers dragen geavanceerde, hittebestendige bescherming bij de grillspiezen.</li>
-            </ul>
+
+        <div class="flex items-stretch justify-center py-10 space-x-10">
+
+            <div id="arbeiders" class="flex-1 max-w-2xl px-6 py-10 border-l-2 border-[#A62639]">
+                <div class="max-w-4xl flex flex-col gap-8">
+                    <h1 class="text-center font-extrabold
+                    bg-[#A62639] text-[#E2E0DF] py-4 rounded-md">Werking binnen Ons Bedrijf</h1>
+                    <p>Bij Dürerzaam geloven we dat een gelukkige werknemer de beste broodjes vouwt. Geen uitbuiting of nachtwerk onder erbarmelijke omstandigheden, maar echte focus op kwaliteit en duurzaamheid.</p>
+                    <ul class="flex flex-col gap-5 pl-6 list-disc">
+                        <li><b>Eerlijk Loon:</b> Iedereen verdient minstens 110% van het minimumloon, inclusief volledige avond- en weekendtoeslagen.</li>
+                        <li><b>Balans & Werktijden:</b> Geen gapende shifts tot 05:00 uur 's nachts. Onze zaken sluiten om 23:00 uur om de nachtrust en het sociale leven van het personeel te beschermen.</li>
+                        <li><b>De Dürerzaam Academy:</b> We investeren in de ontwikkeling van onze medewerkers door middel van opleidingen en trainingen.</li>
+                        <li><b>Veiligheid Eerst:</b> De veiligheid van onze medewerkers is onze prioriteit. Onze werkers dragen geavanceerde, hittebestendige bescherming bij de grillspiezen.</li>
+                    </ul>
+                </div>
+            </div> 
+            
+            <div id="millieu" class="flex-1 max-w-2xl px-6 py-10 border-l-2 border-[#A62639]">
+                <div class="max-w-4xl flex flex-col gap-8">
+                    <h1 class="text-center font-extrabold
+                    bg-[#A62639] text-[#E2E0DF] py-4 rounded-md">Millieuvriendelijkheid</h1>
+                    <p>Onze toewijding aan duurzaamheid gaat verder dan onze werknemers. We streven ernaar om onze ecologische voetafdruk te minimaliseren en een positieve impact op het milieu te hebben.</p>
+                    <ul class="flex flex-col gap-7 pl-6 list-disc">
+                        <li><b>Groene Energie:</b> Onze winkels worden aangedreven door 100% hernieuwbare energiebronnen.</li>
+                        <li><b>Afvalbeheer:</b> We implementeren een uitgebreid recyclingprogramma en streven naar zero waste in onze operaties.</li>
+                        <li><b>Duurzame Verpakkingen:</b> Al onze verpakkingen zijn gemaakt van biologisch afbreekbare of gerecyclede materialen.</li>
+                        <li><b>Lokale Inkoop:</b> We werken samen met lokale leveranciers om de transportafstanden te verkorten en de lokale economie te ondersteunen.</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
-        <div id="millieu" class="section">
-            <h1>Millieuvriendelijkheid</h1>
-            <p>Onze toewijding aan duurzaamheid gaat verder dan onze werknemers. We streven ernaar om onze ecologische voetafdruk te minimaliseren en een positieve impact op het milieu te hebben.</p>
-            <ul>
-                <li><b>Groene Energie:</b> Onze winkels worden aangedreven door 100% hernieuwbare energiebronnen.</li>
-                <li><b>Afvalbeheer:</b> We implementeren een uitgebreid recyclingprogramma en streven naar zero waste in onze operaties.</li>
-                <li><b>Duurzame Verpakkingen:</b> Al onze verpakkingen zijn gemaakt van biologisch afbreekbare of gerecyclede materialen.</li>
-                <li><b>Lokale Inkoop:</b> We werken samen met lokale leveranciers om de transportafstanden te verkorten en de lokale economie te ondersteunen.</li>
-            </ul>
+        <div id="Handel" class=" mt-4 max-w-5xl mx-auto flex items-center px-6 py-2 bg-[#A62639] text-[#E2E0DF] rounded-lg py-6
+        inline-block transition-transform duration-1000 hover:scale-105 shadow-2xl ">
+            <div class="flex max-w-3xl flex-col gap-4">
+                <h1 class="text-center text-lg font-extrabold ">Eerlijke Handel</h1>
+                <p>Wij geloven in eerlijke en transparante handelspraktijken. Door samen te werken met lokale producenten en fair-trade leveranciers, zorgen we voor eerlijke lonen en goede arbeidsvoorwaarden in de hele keten.</p>
+                <ul class="flex flex-col gap-5 pl-6 list-disc">
+                    <li><b>Lokale Samenwerking:</b> We werken nauw samen met lokale boeren en leveranciers om de kwaliteit van onze ingrediënten te waarborgen en de lokale economie te ondersteunen.</li>
+                    <li><b>Fair-Trade Certificering:</b> Al onze koffie, thee en chocolade zijn afkomstig van fair-trade gecertificeerde bronnen.</li>
+                    <li><b>Transparantie:</b> We delen openlijk informatie over onze leveranciers en de herkomst van onze ingrediënten met onze klanten.</li>
+                </ul>
+            </div>
+            <div class=" flex justify-center">
+            <img src="img/fairtrade.png" alt="Fair Trade Logo" class="mx-auto">
+            </div>
         </div>
-        <div id="Handel" class="section">
-            <h1>Eerlijke Handel</h1>
-            <p>Wij geloven in eerlijke en transparante handelspraktijken. Door samen te werken met lokale producenten en fair-trade leveranciers, zorgen we voor eerlijke lonen en goede arbeidsvoorwaarden in de hele keten.</p>
-            <ul>
-                <li><b>Lokale Samenwerking:</b> We werken nauw samen met lokale boeren en leveranciers om de kwaliteit van onze ingrediënten te waarborgen en de lokale economie te ondersteunen.</li>
-                <li><b>Fair-Trade Certificering:</b> Al onze koffie, thee en chocolade zijn afkomstig van fair-trade gecertificeerde bronnen.</li>
-                <li><b>Transparantie:</b> We delen openlijk informatie over onze leveranciers en de herkomst van onze ingrediënten met onze klanten.</li>
-            </ul>
-            <img src="img/fairtrade.png" alt="Fair Trade Logo" class="fairtrade-logo">
-        </div>
-        <div id="Maatschappelijk" class="section">
-            <h1>De Omgeving & De Maatschappij</h1>
+        
+        <div id="Maatschappelijk" class="max-w-4xl mx-auto px-6 py-10 my-6">
+            <div class="flex flex-col gap-6">
+            <h1 class="text-center font-extrabold text-xl border-b-2 border-[#A62639] pb-2">De Omgeving & De Maatschappij</h1>
             <p>We zijn toegewijd aan het ondersteunen van onze gemeenschap en het bijdragen aan een betere samenleving.</p>
-            <ul>
+            <ul class="flex flex-col gap-5 pl-6 list-disc">
                 <li><b>Inclusiviteit:</b> We streven naar een inclusieve werkomgeving waar diversiteit wordt gevierd en iedereen zich welkom voelt.</li>
                 <li><b>Onderwijs & Bewustwording:</b> We bieden educatieve programma's aan om bewustzijn te creëren over duurzaamheid en eerlijke handel bij onze klanten en de bredere gemeenschap.</li>
             </ul>
+            </div>
         </div>
     </main>
-    
-    <footer>
+
+    <footer class="py-6 bg-[#A62639] text-center text-[#E2E0DF]">
         <p><em>&copy; 2026 Dürerzaam&trade;. Alle rechten voorbehouden.</em></p>
     </footer>
     <script src="script.js"></script>
