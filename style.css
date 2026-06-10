@@ -1,0 +1,385 @@
+:root {
+    --bg-dark: #0b0f12;
+    --bg-surface: #131a1f;
+    --bg-surface-light: #1c262e;
+    --primary: #4ade80;
+    --primary-glow: rgba(74, 222, 128, 0.4);
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Navigation --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: rgba(11, 15, 18, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* --- Layout Components --- */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 8rem 0;
+}
+
+.alt-bg {
+    background-color: var(--bg-surface);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    letter-spacing: -1px;
+}
+
+.grid-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: radial-gradient(circle at 80% 20%, rgba(74, 222, 128, 0.08), transparent 50%);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary), #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--primary);
+    color: var(--bg-dark);
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px var(--primary-glow);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px var(--primary-glow);
+}
+
+/* --- Mission & Ingredients --- */
+.stat-card {
+    background: var(--bg-surface);
+    padding: 3rem;
+    border-radius: 24px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-number {
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--primary);
+    display: block;
+}
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.ing-card {
+    background: var(--bg-surface-light);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border-top: 4px solid var(--primary);
+}
+
+.ing-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.ing-card p {
+    color: var(--text-muted);
+}
+
+/* --- Redesigned Panoramic Product Section --- */
+.products-section {
+    padding: 8rem 0;
+    background-color: var(--bg-dark);
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-container {
+    width: 100%;
+    overflow: visible;
+    padding: 3rem 0;
+}
+
+.product-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    width: max-content;
+    will-change: transform;
+}
+
+.product-track.no-transition {
+    transition: none !important;
+}
+
+/* --- Interactive Multi-Scale Cards --- */
+.flavor-card {
+    flex: 0 0 420px;
+    width: 420px;
+    height: 520px;
+    background: var(--bg-surface);
+    border-radius: 32px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    
+    /* Background elements styling */
+    transform: scale(0.78);
+    opacity: 0.35;
+    filter: blur(2px);
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.6s ease,
+                filter 0.6s ease,
+                border-color 0.6s ease,
+                box-shadow 0.6s ease;
+}
+
+/* Pure focused hero card styles */
+.flavor-card.active {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0px);
+    border-color: rgba(74, 222, 128, 0.4);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(74, 222, 128, 0.1);
+}
+
+.can-mockup {
+    width: 85px;
+    height: 170px;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.flavor-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.flavor-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+}
+
+.flavor-story {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.5rem;
+    margin-top: auto;
+    line-height: 1.5;
+    opacity: 0.4;
+    transition: opacity 0.6s ease;
+}
+
+.flavor-card.active .flavor-story {
+    opacity: 1;
+}
+
+/* --- UI Controls --- */
+.nav-btn {
+    position: absolute;
+    right: 8%;
+    background: rgba(28, 38, 46, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.nav-btn:hover {
+    background: var(--primary);
+    color: var(--bg-dark);
+    transform: scale(1.1);
+    box-shadow: 0 0 25px var(--primary-glow);
+}
+
+.timer-bar-container {
+    width: 100%;
+    max-width: 420px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 3rem auto 0 auto;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.timer-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--primary);
+}
+
+/* --- Sustainability & Footer --- */
+.sus-image-placeholder {
+    height: 350px;
+    background: linear-gradient(135deg, var(--bg-surface), var(--bg-surface-light));
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.leaf-icon {
+    font-size: 5rem;
+    filter: drop-shadow(0 0 20px var(--primary-glow));
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    background-color: #080b0d;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+    .grid-two-col { grid-template-columns: 1fr; gap: 2rem; }
+    .hero h1 { font-size: 3rem; }
+    .nav-links { display: none; }
+    .nav-btn { right: 5%; top: auto; bottom: -20px; width: 55px; height: 55px; }
+    .flavor-card { flex: 0 0 290px; width: 290px; height: 490px; padding: 2rem; }
+    .timer-bar-container { max-width: 290px; }
+}
